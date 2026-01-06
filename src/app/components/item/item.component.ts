@@ -27,4 +27,9 @@ export class ItemComponent implements OnInit, OnChanges {
   editarItem() {
     this.emitindoItemParaEditar.emit(this.item);
   }
+
+  itemComprado(event: Event) {
+    const checkbox = (event.target as HTMLInputElement).checked;
+    this.item.comprado = checkbox;
+  }
 }
